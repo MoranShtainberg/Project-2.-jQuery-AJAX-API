@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+   <div class="container fixed-top" id="nav">
+       
+        <ul class="nav nav-pills justify-content-around navbar navbar-dark bg-dark">
+            <li class="nav-item">
+                <!-- <button class="btn nav-link active">Home</button> -->
+                <button type="button" class="btn btn-outline-primary" id="home_btn_id">Home</button>
+            </li>
+            <li class="nav-item">
+                <!-- <button class="btn nav-link active" id="liveReport">Live report</button> -->
+                <button type="button" class="btn btn-outline-primary" id="liveReport">Live report</button>
+            </li>
+            <li class="nav-item">
+                <!-- <button class="btn nav-link active" id="about">About</button> -->
+                <button type="button" class="btn btn-outline-primary" id="aboutBtn">About</button>
+            </li>
+
+            <form class="form-inline my-2 my-lg-0 d-flex  ">
+                <input class="form-control mr-sm-2 " type="search" placeholder="Search a symbol" aria-label="Search">
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0"  id="searchBtn">Search</button> -->
+                <button type="button" class="btn btn-outline-success" id="searchBtn">Success</button>
+            </form>
+        </ul>
+    </div>
+
+    <h1 class="text-center display-1 fw-bold text-decoration-underline">My Cripto Portal</h1>
+    <img src="./img/loading.gif" alt="Still_loading_gif" id="loading">
+
+    <!--------------------------------------------------------Start: div modal ----------------------- -->
+    <div id="mainDivModal" class="position-fixed d-none">
+        <div class="modalHeader d-flex justify-content-between mx-2">
+            <h2 class="fw-bold align-middle">My favorites</h2>
+  
+            <button type="button" class="btn-close align-middle mt-1" aria-label="Close" id="cancel_xBtn"></button>
+        </div>
+
+        <div id="modalBody">
+            <!-- <div class="d-flex justify-content-around">                 
+                <p class="fs-3">Coin symbol</p>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" >                    
+                </div>
+            </div> -->
+
+            <!-- <div class="d-flex justify-content-around">                 
+                <p class="fs-3">Coin symbol</p>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">                    
+                </div>
+            </div> -->
+
+        </div>
+
+        <div class="modalFooter d-flex justify-content-evenly">
+            <button type="button" class="btn btn-secondary position-absolute bottom-0 start-0 mb-2 mx-2" id="cancelBtn">Cancel</button>
+            <button type="button" class="btn btn-primary position-absolute bottom-0 end-0 mb-2 mx-2" id="submitBtn">Submite</button>
+        </div>
+    </div>  
+    <!----------------------------------------------------------------------- End of div modal --------- -->
+
+              <!-- ----------------------------------------Start: About ---------->
+              <div class="container position-fixed top-50 start-50 translate-middle d-none" id="main_about_Div_id">
+                <div class="card-group ">           
+                    <div class="row ">
+        
+                        <div class="col-md-4 col-sm-6 " >
+                            <div class="card text-white bg-primary" >
+                                <button type="button" class="btn-close btn-close-white" aria-label="Close" id="about_close_ctn_1"></button>
+                                <img src="/img/bart.PNG" class="card-img-top" alt="Bart pic" id="bart_pix">
+                                <div class="card-body">
+                                    <h5 class="card-title">Moran Shtainberg</h5>
+                                    <p class="card-text">Cryptocurrencies Miner</p>
+                                    <p class="card-text fs-6">Wanted by five states on charges that due to cryptocurrency mining he left the country without electricity</small></p>
+                                </div>
+                            </div>                    
+                        </div>
+                        
+                        <div class="col-md-8 col-sm-6 ">                    
+                            <div class="card text-white bg-success">              
+                                <div class="card-body">
+                                    <button type="button" class="btn-close btn-close-white" aria-label="Close" id="about_close_ctn_2"></button>
+                                    <h5 class="card-title fs-3">About this project</h5>
+                                    <p class="card-text fs-5">The project was created to make you rich *</p>
+                                    <p class="card-text fs-5">The information we provide you via API is the most up to date and latest on earth **</p>
+                                    <p class="card-text fs-5">The best engineers have created for you a perfect system that is easy to use ***</p>
+                                    <p class="card-text fs-5">Good Luck ****</p>
+                                   
+                                    <p class="card-text fs-6 text-warning ">* User responsibility only</p>
+                                    <p class="card-text fs-6 text-warning ">** The information displayed is 2 to minutes late</p>
+                                    <p class="card-text fs-6 text-warning ">*** The user should make an effort to understand what can be do here</p>
+                                    <p class="card-text fs-6 text-warning ">**** You will definitely need it</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>             
+                </div>
+            </div>
+                 <!-- --------------------------------------------------------End of: about ---------->   
+
+    <div class="parallax"></div>
+    
+    <div class="container" id="conta_of_cards">
+        
+        <div class="row" id="row_id">
+                       
+            <!-- <div class="card col-lg-3 col-md-4 col-sm-6 text-white bg-dark">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title">symbol</h5>
+                        <div class="form-check form-switch">
+                            <input type="checkbox" class="form-check-input" id="flexSwitchCheckDefault">                           
+                        </div>                        
+                    </div>
+                    
+                    <p class="card-text">name</p>
+                    <button class="btn btn-primary more_info_btn">More Info</button>
+
+                    <div class="panel">
+                        <button class="hide_market_data_btn btn btn-secondary">Hide market data</button>
+                        <h6 class="eur">EUR market data</h6>
+                        <h6 class="usd">USD market data</h6>
+                        <h6 class="ils">ILS market data</h6>
+                    </div>                
+                </div>
+            </div> -->
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+}
+/* #nav{
+    border-bottom-color: green;
+    border-style: solid;
+    border-bottom-width: 0px;
+} */
+
+body{
+    font-family:  sans-serif, 'Brush Script MT', cursive;
+    background-color:rgb(1,1,1);    
+}  
+
+.panel{    
+    display: none
+}
+
+#loading, .loadingmini{
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    z-index: 1000;           
+    display: block;
+}
+
+.parallax{  
+    background-image: url('/img/parallax.jpg');
+    /* Set a specific height */
+    min-height: 500px;  
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+body>h1{
+    font-family: 'Brush Script MT', cursive;
+    margin-top: 4rem;
+    color: whitesmoke;
+    background-color: black;     
+}
+
+#mainDivModal{
+    background-color:goldenrod;
+    border-radius: 3%;
+    border-color: honeydew;
+    border-style: solid;
+    width: 50vw;
+    /* min-width: min-content; */
+    /* height: 30vh; */
+    left: 25vw;
+    z-index: 500;
+    /* display: fixed; */
+}
+
+#modalBody{
+    height: 45vh;     
+}
+
+/* .bg{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 400;
+} */
+
+#main_about_Div_id{
+    z-index: 1500;
+}
+
+#bart_pix{
+    width: 15vh;
+}
+
